@@ -24,11 +24,14 @@
     ]
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "fathom-client": "^3.1.0",
+    "isomorphic-fetch": "^3.0.0",
     "next": "^11.1.0",
     "next-seo": "^4.26.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-query": "^3.23.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -39,6 +42,7 @@
     "@types/react": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
+    "autoprefixer": "^10.3.4",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
     "eslint-config-prettier": "^8.3.0",
@@ -46,7 +50,9 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.8",
     "lint-staged": "^11.1.2",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.15",
     "typescript": "^4.3.5"
   }
 }

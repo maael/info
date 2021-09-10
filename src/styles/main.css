@@ -1,5 +1,8 @@
 @import 'variables.css';
 @import 'utilities.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -23,6 +26,7 @@ body,
 #__next {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 @import 'reset.css';

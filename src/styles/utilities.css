@@ -2,3 +2,8 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.neon {
+  font-family: Monoton, 'Open Sans', Arial, Helvetica, sans-serif;
+  font-display: swap;
+}
