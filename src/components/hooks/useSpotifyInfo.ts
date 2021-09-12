@@ -1,5 +1,7 @@
 import { useQuery } from 'react-query'
 
+const SAFE_SPACE = '⠀'
+
 export default function useSpotifyInfo() {
   const { data, isLoading, error } = useQuery(
     'spotifyInfo',
@@ -8,15 +10,17 @@ export default function useSpotifyInfo() {
       refetchInterval: 10_000,
     }
   )
-  const title = `${[data?.item?.name, data?.item?.artists?.map((a) => a.name).join(', ')]
-    .filter(Boolean)
-    .join(' - ')}`.trim()
+  const track = (data?.item?.name || '').replace(/\s/g, SAFE_SPACE)
+  const artists = data?.item?.artists?.map((a) => a.name.replace(/\s/g, SAFE_SPACE)).join(`,${SAFE_SPACE}`)
+  const title = `${[track, artists].filter(Boolean).join(`${SAFE_SPACE}-${SAFE_SPACE}`)}`.trim()
   const albumArt = (data?.item?.album?.images || [])[0]
   const durationMs = data?.item?.duration_ms || 1
   const progressMs = data?.progress_ms || 0
   const percentage = (progressMs / durationMs) * 100
   const custom = {
     title,
+    track,
+    artists,
     albumArt,
     durationMs,
     progressMs,

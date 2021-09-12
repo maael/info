@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "cors": "^2.8.5",
     "fathom-client": "^3.1.0",
     "isomorphic-fetch": "^3.0.0",

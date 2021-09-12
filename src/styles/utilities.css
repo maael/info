@@ -7,3 +7,15 @@
   font-family: Monoton, 'Open Sans', Arial, Helvetica, sans-serif;
   font-display: swap;
 }
+
+.neon:after {
+  content: attr(data-content);
+  left: 0px;
+  position: absolute;
+  text-shadow: 0 1px 0.5rem currentColor, 0 1px 1rem currentColor;
+  opacity: 0.5;
+}
+
+.indent {
+  text-indent: 1rem;
+}

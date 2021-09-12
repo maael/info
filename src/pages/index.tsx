@@ -1,9 +1,11 @@
+import * as React from 'react'
 import Image from 'next/image'
 import useSpotifyInfo from '~/components/hooks/useSpotifyInfo'
+import ScrollingText from '~/components/primitives/ScrollingText'
 
 export default function Index() {
   const {
-    custom: { albumArt, title, percentage },
+    custom: { albumArt, track, artists, percentage },
   } = useSpotifyInfo()
   return (
     <div className="bg-gray-800 text-pink-600 h-full flex flex-col relative">
@@ -15,12 +17,18 @@ export default function Index() {
           >
             <Image className="inline" src={albumArt.url} layout="fill" priority />
             <div className="h-2 bg-gray-600 absolute bottom-0 left-0 w-full" />
-            <div className="h-2 bg-pink-600 absolute bottom-0 left-0" style={{ width: `${percentage}%` }} />
+            <div
+              className="h-2 bg-pink-600 absolute bottom-0 left-0 transition-all ease-linear"
+              style={{ width: `${percentage}%` }}
+            />
           </div>
         ) : null}
-        <div className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-6xl uppercase text-center py-10 absolute top-0 left-0 right-0">
-          {title || 'Info'}
-        </div>
+        <ScrollingText className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-6xl uppercase py-10 absolute top-0 left-0 right-0 whitespace-nowrap indent">
+          {track || 'Info'}
+        </ScrollingText>
+        <ScrollingText className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-5xl uppercase py-10 absolute top-20 left-0 right-0 whitespace-nowrap indent">
+          {artists || 'Info'}
+        </ScrollingText>
       </div>
     </div>
   )
