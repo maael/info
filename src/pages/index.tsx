@@ -2,11 +2,13 @@ import * as React from 'react'
 import Image from 'next/image'
 import useSpotifyInfo from '~/components/hooks/useSpotifyInfo'
 import ScrollingText from '~/components/primitives/ScrollingText'
+import useWeatherInfo from '~/components/hooks/useWeather'
 
 export default function Index() {
   const {
     custom: { albumArt, track, artists, percentage },
   } = useSpotifyInfo()
+  const { weather } = useWeatherInfo()
   return (
     <div className="bg-gray-800 text-pink-600 h-full flex flex-col relative">
       <div className="flex-1 flex justify-center items-center">
@@ -27,13 +29,13 @@ export default function Index() {
           timingCount={Math.max(track.length, artists.length)}
           className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-6xl uppercase py-10 absolute top-0 left-0 whitespace-nowrap indent"
         >
-          {track || 'Info'}
+          {track || weather[0]?.main || 'Info'}
         </ScrollingText>
         <ScrollingText
           timingCount={Math.max(track.length, artists.length)}
           className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-5xl uppercase py-10 absolute top-20 left-0 whitespace-nowrap indent"
         >
-          {artists || 'Info'}
+          {artists || weather[0]?.description || 'Info'}
         </ScrollingText>
       </div>
     </div>
