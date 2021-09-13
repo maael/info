@@ -19,22 +19,34 @@ function runMiddleware(req, res, fn) {
 }
 
 const OPEN_WEATHER_API_KEY = process.env.OPEN_WEATHER_API_KEY as string
+const STEAM_API_KEY = process.env.STEAM_API_KEY as string
+const STEAM_ID = '76561197996869787'
 
 const weather: NextApiHandler = async (req, res) => {
   const result = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=Croydon,uk&appid=${OPEN_WEATHER_API_KEY}&units=metric`
   )
-  const text = await result.text()
-  if (text) {
-    const json = JSON.parse(text)
-    res.json({ ...json, ok: 1 })
-  } else {
-    res.json({ error: 'Got back something not JSON', ok: 0 })
-  }
+  const json = await result.json()
+  res.json({ ...json, ok: 1 })
+}
+
+const steam: NextApiHandler = async (req, res) => {
+  const result = await fetch(
+    `http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?key=${STEAM_API_KEY}&steamid=${STEAM_ID}&relationship=friend`
+  )
+  const { friendslist } = await result.json()
+  const summaryResult = await fetch(
+    `http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=${STEAM_API_KEY}&steamids=${friendslist.friends
+      .map((f) => f.steamid)
+      .join(',')}`
+  )
+  const summaries = await summaryResult.json()
+  res.json({ ...summaries.response, ok: 1 })
 }
 
 const actions = {
   weather,
+  steam,
 }
 
 const InfoApi: NextApiHandler = async (req, res) => {

@@ -3,12 +3,14 @@ import Image from 'next/image'
 import useSpotifyInfo from '~/components/hooks/useSpotifyInfo'
 import ScrollingText from '~/components/primitives/ScrollingText'
 import useWeatherInfo from '~/components/hooks/useWeather'
+import useSteam from '~/components/hooks/useSteam'
 
 export default function Index() {
   const {
     custom: { albumArt, track, artists, percentage },
   } = useSpotifyInfo()
   const { weather } = useWeatherInfo()
+  const { playersInDRG } = useSteam()
   return (
     <div className="bg-gray-800 text-pink-600 h-full flex flex-col relative">
       <div className="flex-1 flex justify-center items-center">
@@ -38,6 +40,7 @@ export default function Index() {
           {artists || weather[0]?.description || 'Info'}
         </ScrollingText>
       </div>
+      {playersInDRG.length ? <div className="text-center">{playersInDRG.length} in Deep Rock Galactic</div> : null}
     </div>
   )
 }
