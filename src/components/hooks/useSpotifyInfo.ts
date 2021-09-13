@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query'
 
-const SAFE_SPACE = '⠀'
+export const SAFE_SPACE = ' '
 
 export default function useSpotifyInfo() {
   const { data, isLoading, error } = useQuery(
@@ -11,7 +11,7 @@ export default function useSpotifyInfo() {
     }
   )
   const track = (data?.item?.name || '').replace(/\s/g, SAFE_SPACE)
-  const artists = data?.item?.artists?.map((a) => a.name.replace(/\s/g, SAFE_SPACE)).join(`,${SAFE_SPACE}`)
+  const artists = data?.item?.artists?.map((a) => a.name.replace(/\s/g, SAFE_SPACE)).join(`,${SAFE_SPACE}`) || ''
   const title = `${[track, artists].filter(Boolean).join(`${SAFE_SPACE}-${SAFE_SPACE}`)}`.trim()
   const albumArt = (data?.item?.album?.images || [])[0]
   const durationMs = data?.item?.duration_ms || 1

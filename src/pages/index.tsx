@@ -23,10 +23,16 @@ export default function Index() {
             />
           </div>
         ) : null}
-        <ScrollingText className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-6xl uppercase py-10 absolute top-0 left-0 right-0 whitespace-nowrap indent">
+        <ScrollingText
+          timingCount={Math.max(track.length, artists.length)}
+          className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-6xl uppercase py-10 absolute top-0 left-0 whitespace-nowrap indent"
+        >
           {track || 'Info'}
         </ScrollingText>
-        <ScrollingText className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-5xl uppercase py-10 absolute top-20 left-0 right-0 whitespace-nowrap indent">
+        <ScrollingText
+          timingCount={Math.max(track.length, artists.length)}
+          className="neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600 text-5xl uppercase py-10 absolute top-20 left-0 whitespace-nowrap indent"
+        >
           {artists || 'Info'}
         </ScrollingText>
       </div>
