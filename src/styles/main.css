@@ -29,4 +29,9 @@ body,
   overflow: hidden;
 }
 
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
 @import 'reset.css';

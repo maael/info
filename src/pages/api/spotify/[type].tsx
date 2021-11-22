@@ -4,6 +4,7 @@ import Cors from 'cors'
 
 const cors = Cors({
   methods: ['GET', 'HEAD'],
+  origin: process.env.ORIGIN,
 })
 
 function runMiddleware(req, res, fn) {
