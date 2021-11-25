@@ -25,6 +25,8 @@ export default function useSpotifyInfo() {
     durationMs,
     progressMs,
     percentage,
+    isPlaying: data?.isPlaying || false,
+    isPaused: data?.isPlaying && !data?.is_playing,
   }
   return { data, isLoading, error, custom }
 }
