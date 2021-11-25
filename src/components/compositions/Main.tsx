@@ -58,8 +58,8 @@ export default function Main() {
         </>
       ) : null}
       {playersInDRG.length ? (
-        <div className="flex flex-row items-center justify-center gap-2 text-center text-pink-600">
-          <GiWarPick className="text-xl" /> {playersInDRG.length} in Deep Rock Galactic
+        <div className="flex flex-row items-center justify-center text-center text-pink-600">
+          <GiWarPick className="mr-2 text-xl" /> {playersInDRG.length} in Deep Rock Galactic
         </div>
       ) : null}
     </>
