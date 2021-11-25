@@ -1,0 +1,24 @@
+{
+  "short_name": "Matt:Dash",
+  "name": "Dashboard for things",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#1F2937",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#DB2777",
+  "shortcuts": [],
+  "description": "Dashboard for things",
+  "screenshots": []
+}

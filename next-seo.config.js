@@ -1,6 +1,6 @@
-const title = 'Matt Elphick | Software Engineer'
-const description = 'Software engineer mainly messing around with JavaScript.'
-const url = 'https://mael.tech/'
+const title = 'Matt:Dash'
+const description = 'Dashboard for things'
+const url = 'https://info.mael.tech/'
 
 export default {
   title,
