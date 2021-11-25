@@ -25,6 +25,35 @@ export default function Paint() {
   }, [])
   const height = areaSize.h - 10 - areaSize.w / COLOURS.length
   const width = areaSize.w
+  function onStart(e) {
+    if (!canvasRef.current) return
+    isDrawing.current = true
+    mousePosition.current = {
+      x: e.pageX - canvasRef.current.offsetLeft,
+      y: e.pageY - canvasRef.current.offsetTop,
+    }
+  }
+  function onEnd() {
+    isDrawing.current = false
+  }
+  function onMove(e) {
+    const ctx = canvasRef.current?.getContext('2d')
+    if (isDrawing.current && ctx && canvasRef.current) {
+      const newMousePosition = {
+        x: e.pageX - canvasRef.current.offsetLeft,
+        y: e.pageY - canvasRef.current.offsetTop,
+      }
+      ctx.strokeStyle = colour
+      ctx.lineJoin = 'round'
+      ctx.lineWidth = 10
+      ctx.beginPath()
+      ctx.moveTo(mousePosition.current.x, mousePosition.current.y)
+      ctx.lineTo(newMousePosition.x, newMousePosition.y)
+      ctx.closePath()
+      ctx.stroke()
+      mousePosition.current = newMousePosition
+    }
+  }
   return (
     <div className="flex flex-col flex-1">
       <form
@@ -48,42 +77,18 @@ export default function Paint() {
       <div className="flex-1" ref={areaRef}>
         <canvas
           className="overflow-hidden bg-white rounded-md"
-          style={{ height, width }}
+          style={{ height, width, touchAction: 'none' }}
           height={height}
           width={width}
           ref={canvasRef}
-          onMouseDown={(e) => {
-            if (!canvasRef.current) return
-            isDrawing.current = true
-            mousePosition.current = {
-              x: e.pageX - canvasRef.current.offsetLeft,
-              y: e.pageY - canvasRef.current.offsetTop,
-            }
-          }}
-          onMouseMove={(e) => {
-            const ctx = canvasRef.current?.getContext('2d')
-            if (isDrawing.current && ctx && canvasRef.current) {
-              const newMousePosition = {
-                x: e.pageX - canvasRef.current.offsetLeft,
-                y: e.pageY - canvasRef.current.offsetTop,
-              }
-              ctx.strokeStyle = colour
-              ctx.lineJoin = 'round'
-              ctx.lineWidth = 10
-              ctx.beginPath()
-              ctx.moveTo(mousePosition.current.x, mousePosition.current.y)
-              ctx.lineTo(newMousePosition.x, newMousePosition.y)
-              ctx.closePath()
-              ctx.stroke()
-              mousePosition.current = newMousePosition
-            }
-          }}
-          onMouseLeave={() => {
-            isDrawing.current = false
-          }}
-          onMouseUp={() => {
-            isDrawing.current = false
-          }}
+          onMouseDown={onStart}
+          onMouseMove={onMove}
+          onMouseLeave={onEnd}
+          onMouseUp={onEnd}
+          onTouchStart={onStart}
+          onTouchMove={onMove}
+          onTouchEnd={onEnd}
+          onTouchCancel={onEnd}
         />
         <Palette colour={colour} setColour={setColour} width={areaSize.w} />
       </div>
