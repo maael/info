@@ -55,7 +55,7 @@ export default function AlbumArt({
           priority
         />
         {isPaused ? (
-          <div className="absolute inset-0 flex justify-center items-center">
+          <div className="absolute inset-0 flex items-center justify-center">
             <PausedIco className="text-pink-600 filter drop-shadow-md" style={{ fontSize: size * 0.3 }} />
           </div>
         ) : null}
