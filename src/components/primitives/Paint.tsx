@@ -37,9 +37,14 @@ export default function Paint({ onSave }: { onSave: (name: string, blob: Blob | 
   function onMove(e) {
     const ctx = canvasRef.current?.getContext('2d')
     if (isDrawing.current && ctx && canvasRef.current) {
+      let eventPosition = { x: e.pageX, y: e.pageY }
+      if (eventPosition.x === undefined && eventPosition.y === undefined) {
+        const touch = e.touches.item(0)
+        eventPosition = { x: touch.pageX, y: touch.pageY }
+      }
       const newMousePosition = {
-        x: e.pageX - canvasRef.current.offsetLeft,
-        y: e.pageY - canvasRef.current.offsetTop,
+        x: eventPosition.x - canvasRef.current.offsetLeft,
+        y: eventPosition.y - canvasRef.current.offsetTop,
       }
       ctx.strokeStyle = colour
       ctx.lineJoin = 'round'
