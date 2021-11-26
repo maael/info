@@ -1,40 +1,53 @@
-# Next Template
+# ℹ️ Info - https://info.mael.tech
 
-A simple repo to act as a template for a Next.js project.
+## Features
 
-Includes:
+- Display Spotify information
+  - Album art, artist, track name, paused, progress bar
+- Filtered list of available cocktails
+  - Limited by in stock ingredients
+  - Easy to follow instructions
+- Guestbook
+  - Draw via mouse/touch
+  - Saved to AWS S3, so publically shareable
+- Train departures list from nearby station to common destinations
+  - Includes number of stops, realtime departure time, journey length
+  - From [Realtime Trains API](https://api.rtt.io/)
+- Shows if friends are playing interested games on Steam
+  - Currently only Deep Rock Galactic
+- Setup as a PWA
+  - Allows fullscreen and adding to homescreen
+  - When combined with app to keep screen on, creates a "home terminal" suitable for parties
 
-- Next.js
-- TypeScript
-- Prettier
-- Eslint
-- Prettier + Eslint on commit
-- Fathom Analytics hook
-- next-seo
-- Sane CSS reset/starting point
+## Data
 
-## Usage
+- [Drinks](./data/drinks.md)
+- [Ingredients Stock](./data/stock.md)
 
-- Remove [GitHub workflow](./github/workflows/usage.yml) to track usage.
+## Dev
 
-<!-- TEMPLATE_LIST_START -->
+```sh
+git clone git@github.com:maael/info.git
+cd info
+yarn
+npx vercel link
+npx vercel env pull
+yarn dev
+```
 
-# 16 Repositories using template
+Hosted on [Vercel](https://vercel.com).
 
-- [maael/cached-proxy](https://github.com/maael/cached-proxy)
-- [maael/twitch-guild-wars-2-build-viewer](https://github.com/maael/twitch-guild-wars-2-build-viewer)
-- [maael/discord-slash-commands](https://github.com/maael/discord-slash-commands)
-- [maael/meow-are-you](https://github.com/maael/meow-are-you)
-- [maael/where-am-i](https://github.com/maael/where-am-i)
-- [maael/dessa-site](https://github.com/maael/dessa-site)
-- [maael/tweetem](https://github.com/maael/tweetem)
-- [maael/observatory](https://github.com/maael/observatory)
-- [maael/gh-short-url](https://github.com/maael/gh-short-url)
-- [maael/who-was](https://github.com/maael/who-was)
-- [maael/tilted](https://github.com/maael/tilted)
-- [maael/bopsy](https://github.com/maael/bopsy)
-- [maael/iono](https://github.com/maael/iono)
-- [Bodmass/guildy](https://github.com/Bodmass/guildy)
-- [maael/hydratwitch](https://github.com/maael/hydratwitch)
-- [maael/betrayal-game](https://github.com/maael/betrayal-game)
-<!-- TEMPLATE_LIST_END -->
+### Gotchas
+
+- Due to the target device for usage, can't use modern css such as `gap` and `aspect-ratio`.
+
+## Todo
+
+- Highlight cancelled/delayed trains better
+- Link to current Spotify playlist if any via QR code
+  - Goal is to allow people to easily add songs to playlists
+- Allow pausing Spotify directly if installed as a PWA
+- Party game helper
+  - Generate interesting questions etc
+- Shuffle drinks to get a random drink suggestion from list
+- Shuffle ingredients to generate a completely random drink
