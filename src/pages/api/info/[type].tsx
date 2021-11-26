@@ -2,6 +2,8 @@ import { NextApiHandler } from 'next'
 import fetch from 'isomorphic-fetch'
 import Cors from 'cors'
 import throat from 'throat'
+import parse from 'date-fns/parse'
+import compareAsc from 'date-fns/compareAsc'
 
 const cors = Cors({
   methods: ['GET', 'HEAD'],
@@ -45,6 +47,10 @@ function formatTime(i?: string) {
   return parts.join('')
 }
 
+function parseToDate(d: any) {
+  return parse(`${d.runDate} ${formatTime(d.locationDetail.realtimeDeparture)}`, 'yyyy-MM-dd HH:mm', new Date())
+}
+
 function mapTrainData(fromCRS: string, toCRS: string) {
   return async function (d: any) {
     return {
@@ -53,7 +59,7 @@ function mapTrainData(fromCRS: string, toCRS: string) {
       trains: await Promise.all(
         (d.services || [])
           .filter((s) => s.isPassenger)
-          .sort((a, b) => parseInt(a.locationDetail.realtimeDeparture) - parseInt(b.locationDetail.realtimeDeparture))
+          .sort((a, b) => compareAsc(parseToDate(a), parseToDate(b)))
           .map(
             throat(2, async (s) => {
               const basic = {
