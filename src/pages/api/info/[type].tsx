@@ -51,7 +51,7 @@ function mapTrainData(fromCRS: string, toCRS: string) {
       from: d.location.name,
       to: d.filter.destination.name,
       trains: await Promise.all(
-        d.services
+        (d.services || [])
           .filter((s) => s.isPassenger)
           .sort((a, b) => parseInt(a.locationDetail.realtimeDeparture) - parseInt(b.locationDetail.realtimeDeparture))
           .map(
