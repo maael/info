@@ -3,87 +3,11 @@ import { FaCocktail, FaInfoCircle, FaUser } from 'react-icons/fa'
 import cls from 'classnames'
 import NeonText from '~/components/primitives/NeonText'
 import Overlay from '~/components/primitives/Overlay'
+import { getDrinks, getStock } from '~/utils/data'
+import { Drink } from '~/utils/types'
 
-const IN_STOCK_INGREDIENTS = ['Midori', 'Lemonade', 'Sour Mix', 'Rum']
-
-const DRINKS = [
-  {
-    id: 1,
-    name: 'Kermit Juice',
-    description: 'Green and juicey',
-    ingredients: [
-      { name: 'Midori', amount: '1 shot' },
-      { name: 'Sour Mix', amount: '3 shots' },
-      { name: 'Lemonade', amount: 'Top it up' },
-    ],
-    steps: ['Do thing', 'do other thing'],
-    addedBy: 'Matt',
-  },
-  {
-    id: 2,
-    name: 'Dark and Stormy and a super long name',
-    description: 'Dark, stormy',
-    ingredients: [
-      {
-        name: 'Rum',
-        amount: '1 shot',
-      },
-    ],
-    steps: ['Do thing', 'do other thing'],
-    addedBy: 'Matt',
-  },
-  {
-    id: 3,
-    name: 'Kermit Juice',
-    description: 'Green and juicey',
-    ingredients: [
-      { name: 'Midori', amount: '1 shot' },
-      { name: 'Sour Mix', amount: '3 shots' },
-      { name: 'Lemonade', amount: 'Top it up' },
-    ],
-    steps: ['Do thing', 'do other thing'],
-    addedBy: 'Matt',
-  },
-  {
-    id: 4,
-    name: 'Dark and Stormy',
-    description: 'Dark, stormy',
-    ingredients: [
-      {
-        name: 'Rum',
-        amount: '1 shot',
-      },
-    ],
-    addedBy: 'Matt',
-  },
-  {
-    id: 5,
-    name: 'Kermit Juice',
-    description: 'Green and juicey',
-    ingredients: [
-      { name: 'Midori', amount: '1 shot' },
-      { name: 'Sour Mix', amount: '3 shots' },
-      { name: 'Lemonade', amount: 'Top it up' },
-    ],
-    addedBy: 'Matt',
-  },
-  {
-    id: 6,
-    name: 'Dark and Stormy and a super long name',
-    description: 'Dark, stormy',
-    ingredients: [
-      {
-        name: 'Rum',
-        amount: '1 shot',
-      },
-    ],
-    addedBy: 'Matt',
-  },
-]
-
-const IN_STOCK_DRINKS = DRINKS.filter((d) => d.ingredients.every(({ name }) => IN_STOCK_INGREDIENTS.includes(name)))
-
-export default function DrinksPage() {
+export default function DrinksPage({ drinks }: { drinks: Drink[] }) {
+  const numInStock = drinks.filter((d) => d.inStock).length
   return (
     <Overlay>
       <h1 className="mt-5 text-5xl text-center uppercase neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600">
@@ -91,20 +15,18 @@ export default function DrinksPage() {
       </h1>
       <div className="flex flex-col items-center">
         <input
-          placeholder="Search..."
+          placeholder={`Search ${numInStock} drink${numInStock === 1 ? '' : 's'}...`}
           className="w-11/12 px-2 py-1 mx-2 mt-2 mb-3 text-white bg-gray-800 border border-gray-900 rounded-md"
         />
       </div>
       <div className="flex flex-col h-full pb-40 overflow-y-scroll">
-        {IN_STOCK_DRINKS.map((d) => (
-          <DrinkItem key={d.id} drink={d} />
-        ))}
+        {drinks.map((d) => (d.inStock ? <DrinkItem key={d.id} drink={d} /> : null))}
       </div>
     </Overlay>
   )
 }
 
-function DrinkItem({ drink }: { drink: typeof DRINKS[0] }) {
+function DrinkItem({ drink }: { drink: Drink }) {
   const [isOpen, setIsOpen] = React.useState(false)
   return (
     <div
@@ -117,9 +39,11 @@ function DrinkItem({ drink }: { drink: typeof DRINKS[0] }) {
         </NeonText>
         <FaInfoCircle className={cls('text-xl -mr-1', { 'opacity-60': !isOpen })} />
       </div>
-      <p className="flex flex-row items-center mb-1 text-sm">
-        <FaInfoCircle className="mr-2 text-sm" /> {drink.description}
-      </p>
+      {drink.description ? (
+        <p className="flex flex-row items-center mb-1 text-sm">
+          <FaInfoCircle className="mr-2 text-sm" /> {drink.description}
+        </p>
+      ) : null}
       <p className="flex flex-row items-center mb-1">
         <FaCocktail className="mr-2 text-sm" /> {drink.ingredients.map((i) => i.name).join(', ')}
       </p>
@@ -128,6 +52,18 @@ function DrinkItem({ drink }: { drink: typeof DRINKS[0] }) {
       </p>
       {isOpen ? (
         <div className="mt-2 mb-1">
+          <h4 className="mb-1 font-bold uppercase border-b border-pink-600">Amounts</h4>
+          {drink.steps ? (
+            <ol className="flex flex-col">
+              {drink.ingredients.map((i) => (
+                <li key={i.name} className="mb-1">
+                  - {[i.name, i.amount].filter(Boolean).join(', ')}
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p>Make the drink</p>
+          )}
           <h4 className="mb-1 font-bold uppercase border-b border-pink-600">Steps</h4>
           {drink.steps ? (
             <ol className="flex flex-col">
@@ -144,4 +80,12 @@ function DrinkItem({ drink }: { drink: typeof DRINKS[0] }) {
       ) : null}
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const stock = await getStock()
+  const drinks = await getDrinks(stock)
+  return {
+    props: { drinks, stock },
+  }
 }
