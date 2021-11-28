@@ -22,6 +22,8 @@ function runMiddleware(req, res, fn) {
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID as string
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET as string
 const REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN as string
+const ALLOWED_IPS = (process.env.ALLOWED_IPS || '').split(',').map((i) => i.trim())
+const IS_DEV = process.env.VERCEL_ENV === 'development'
 
 async function getRefreshedToken() {
   const body = new URLSearchParams({
@@ -110,6 +112,10 @@ const playing: NextApiHandler = async (req, res) => {
 }
 
 const pause: NextApiHandler = async (req, res) => {
+  if (!IS_DEV && !ALLOWED_IPS.includes((req.headers['x-real-ip'] || '').toString())) {
+    res.json({ error: 'Not allowed ip', isDev: IS_DEV, ip: req.headers['x-real-ip']?.toString() })
+    return
+  }
   const accessToken = await getRefreshedToken()
   let result
   try {
