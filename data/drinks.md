@@ -26,6 +26,8 @@ A Moscow Mule but with dark rum.
 
 # Purple Rain
 
+And let me guide you to the purple rain
+
 ## Ingredients
 
 - Vodka, 2 shots

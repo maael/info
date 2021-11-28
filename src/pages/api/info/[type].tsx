@@ -4,6 +4,8 @@ import Cors from 'cors'
 import throat from 'throat'
 import parse from 'date-fns/parse'
 import compareAsc from 'date-fns/compareAsc'
+import booste from 'booste'
+import { getRandomInt } from '~/utils/rnd'
 
 const cors = Cors({
   methods: ['GET', 'HEAD'],
@@ -27,6 +29,7 @@ const STEAM_API_KEY = process.env.STEAM_API_KEY as string
 const STEAM_ID = '76561197996869787'
 const RTT_USER = process.env.RTT_USER
 const RTT_PASSWORD = process.env.RTT_PASSWORD
+const BOOSTE_API_KEY = process.env.BOOSTE_API_KEY
 
 async function fetchRtt(url: string) {
   return fetch(url, {
@@ -174,10 +177,22 @@ const steam: NextApiHandler = async (_req, res) => {
   res.json({ ...summaries.response, ok: 1 })
 }
 
+const generatetext: NextApiHandler = async (req, res) => {
+  const input = req.query.input.toString()
+  const length = Number((req.query.length || '').toString() || getRandomInt(5, 10))
+  console.info({ input, length })
+  const output = await booste.gpt2(BOOSTE_API_KEY, input, length)
+  res.json({
+    input,
+    output,
+  })
+}
+
 const actions = {
   weather,
   steam,
   trains,
+  generatetext,
 }
 
 const InfoApi: NextApiHandler = async (req, res) => {

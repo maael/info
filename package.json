@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1036.0",
+    "booste": "^0.0.8",
     "classnames": "^2.3.1",
     "cors": "^2.8.5",
     "date-fns": "^2.26.0",

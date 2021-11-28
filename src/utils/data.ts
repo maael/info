@@ -59,8 +59,11 @@ export async function getDrinks(stock: Stock[]) {
   const lines = await readDataLines('drinks.md')
   const sections = getSections(lines)
   const items = sections.map((s) => {
-    const name = cleanLine(s.find((l) => l.startsWith('#')))
-    const namedSections = getNamedSections('##', s)
+    const cs = s.filter(Boolean)
+    const nameIdx = cs.findIndex((l) => l.startsWith('#'))
+    const name = cleanLine(cs[nameIdx] || 'Unknown')
+    const description = cs[nameIdx + 1].startsWith('#') ? '' : cs[nameIdx + 1]
+    const namedSections = getNamedSections('##', cs)
     const steps = cleanList(namedSections.Steps)
     const ingredients = cleanList(namedSections.Ingredients).map((i) => {
       const parts = i.split(',').map((p) => p.trim())
@@ -76,7 +79,7 @@ export async function getDrinks(stock: Stock[]) {
     const drink: Drink = {
       id: uuid(),
       name: name || '???',
-      description: '',
+      description,
       addedBy: 'Matt',
       ingredients,
       steps: steps.length ? steps : DEFAULT_STEPS,
