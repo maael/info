@@ -9,6 +9,7 @@ import FitText from '~/components/primitives/FitText'
 import AlbumArt from '~/components/primitives/AlbumArt'
 import WeatherIcon from '~/components/primitives/WeatherIcon'
 import EmojiFavicon from '~/components/primitives/EmojiFavicon'
+import { prepNeonText } from '~/utils/str'
 
 export default function Main() {
   const {
@@ -28,7 +29,7 @@ export default function Main() {
         </>
       ) : null}
       <FitText className="text-center uppercase neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600">
-        {track || weather?.main || 'Loading...'}
+        {track || prepNeonText(weather?.main) || 'Loading...'}
       </FitText>
       {isLoading ? (
         <div className="flex items-center justify-center">
@@ -39,7 +40,7 @@ export default function Main() {
         className="text-center uppercase neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600"
         style={{ marginTop: 10 }}
       >
-        {artists || weather?.description || ''}
+        {artists || prepNeonText(weather?.description) || ''}
       </FitText>
       {albumArt ? (
         <AlbumArt
