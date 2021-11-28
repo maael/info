@@ -44,10 +44,10 @@ Hosted on [Vercel](https://vercel.com).
 ## Todo
 
 - Highlight cancelled/delayed trains better
-- Link to current Spotify playlist if any via QR code
-  - Goal is to allow people to easily add songs to playlists
-- Allow pausing Spotify directly if installed as a PWA
+- ~Link to current Spotify playlist if any via QR code~
+  - ~Goal is to allow people to easily add songs to playlists~
+- ~Allow pausing Spotify directly if installed as a PWA~
 - Party game helper
   - Generate interesting questions etc
-- Shuffle drinks to get a random drink suggestion from list
-- Shuffle ingredients to generate a completely random drink
+- ~Shuffle drinks to get a random drink suggestion from list~
+- ~Shuffle ingredients to generate a completely random drink~

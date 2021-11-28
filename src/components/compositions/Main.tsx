@@ -12,7 +12,7 @@ import EmojiFavicon from '~/components/primitives/EmojiFavicon'
 
 export default function Main() {
   const {
-    custom: { albumArt, track, artists, percentage, isPaused, durationMs, isPlaying },
+    custom: { albumArt, track, artists, percentage, isPaused, durationMs, isPlaying, playlist },
   } = useSpotifyInfo()
   const { weather, temp } = useWeatherInfo()
   const { playersInDRG } = useSteam()
@@ -42,7 +42,13 @@ export default function Main() {
         {artists || weather?.description || ''}
       </FitText>
       {albumArt ? (
-        <AlbumArt art={albumArt?.url} isPaused={isPaused} durationMs={durationMs} percentage={percentage} />
+        <AlbumArt
+          art={albumArt?.url}
+          isPaused={isPaused}
+          durationMs={durationMs}
+          percentage={percentage}
+          playlist={playlist}
+        />
       ) : temp ? (
         <>
           <FitText

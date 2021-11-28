@@ -109,11 +109,40 @@ const playing: NextApiHandler = async (req, res) => {
   }
 }
 
+const pause: NextApiHandler = async (req, res) => {
+  const accessToken = await getRefreshedToken()
+  let result
+  try {
+    result = await fetch('https://api.spotify.com/v1/me/player/pause', {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+      method: 'PUT',
+    })
+    if (result.status === 403) throw new Error('Paused already')
+  } catch {
+    result = await fetch('https://api.spotify.com/v1/me/player/play', {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+      method: 'PUT',
+    })
+  }
+  const text = await result.text()
+  if (text) {
+    const json = JSON.parse(text)
+    res.json({ ...json, isPlaying: true, ok: 1 })
+  } else {
+    res.json({ isPlaying: false, ok: 1 })
+  }
+}
+
 const actions = {
   login,
   info,
   token,
   playing,
+  pause,
 }
 
 const SpotifyApi: NextApiHandler = async (req, res) => {
