@@ -23,6 +23,7 @@
 
 - [Drinks](./data/drinks.md)
 - [Ingredients Stock](./data/stock.md)
+- [Games](./data/games.md)
 
 ## Dev
 
@@ -47,7 +48,7 @@ Hosted on [Vercel](https://vercel.com).
 - ~Link to current Spotify playlist if any via QR code~
   - ~Goal is to allow people to easily add songs to playlists~
 - ~Allow pausing Spotify directly if installed as a PWA~
-- Party game helper
-  - Generate interesting questions etc
+- ~Party game helper~
+  - ~Generate interesting questions etc~
 - ~Shuffle drinks to get a random drink suggestion from list~
 - ~Shuffle ingredients to generate a completely random drink~

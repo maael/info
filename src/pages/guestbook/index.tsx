@@ -1,13 +1,13 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaPlusCircle } from 'react-icons/fa'
+import { FaPlusCircle, FaSpinner } from 'react-icons/fa'
 import cls from 'classnames'
 import Overlay from '~/components/primitives/Overlay'
 import useGuestbookMedia from '~/components/hooks/useGuestbookMedia'
 
 export default function GuestbookPage() {
-  const { data } = useGuestbookMedia()
+  const { data, isLoading } = useGuestbookMedia()
   const [selected, setSelected] = React.useState('')
   return (
     <Overlay>
@@ -44,6 +44,11 @@ export default function GuestbookPage() {
                 .reverse()
                 .join('/') || 'Unknown'}
             </caption>
+          </div>
+        ) : null}
+        {isLoading ? (
+          <div>
+            <FaSpinner className="animate-spin mx-auto mt-3 text-4xl" />
           </div>
         ) : null}
         <div className="flex flex-row flex-wrap items-start justify-center flex-1 pb-20 overflow-y-auto">

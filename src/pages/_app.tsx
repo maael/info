@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
-import { FaCocktail, FaMusic, FaTrain, FaBook } from 'react-icons/fa'
+import { FaCocktail, FaMusic, FaTrain, FaBook, FaDice } from 'react-icons/fa'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import useFathom from '~/components/hooks/useFathom'
 import SEO from '~/../next-seo.config'
@@ -23,6 +23,11 @@ function Footer() {
       <Link href="/drinks">
         <a className="flex flex-row items-center justify-center flex-1 px-2 py-3 bg-yellow-800 cursor-pointer lg:py-1 hover:bg-yellow-600">
           <FaCocktail />
+        </a>
+      </Link>
+      <Link href="/games">
+        <a className="flex flex-row items-center justify-center flex-1 px-2 py-3 bg-purple-800 cursor-pointer lg:py-1 hover:bg-purple-600">
+          <FaDice />
         </a>
       </Link>
       <Link href="/guestbook">

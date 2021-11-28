@@ -15,7 +15,6 @@ export default function GuestbookPage() {
           <Paint
             onSave={async (name, blob) => {
               if (!blob) return
-              console.info('what', slugify(name), name, blob)
               const formData = new FormData()
               formData.append('name', slugify(name))
               formData.append('file', blob, `${slugify(name)}.png`)

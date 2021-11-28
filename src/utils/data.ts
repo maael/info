@@ -116,3 +116,13 @@ export async function getStock() {
   const data = Object.entries(sections).flatMap(([k, v]) => getTable(fieldMap[k], v, { type: k.toLowerCase() }))
   return data
 }
+
+export async function getGameInfo() {
+  const lines = await readDataLines('games.md')
+  const sections = getNamedSections('#', lines)
+  console.info({ sections })
+  return Object.entries(sections).reduce(
+    (acc, [k, v]) => ({ ...acc, [k]: v.map((l) => l.replace(/^-/, '').trim()).filter(Boolean) }),
+    {}
+  )
+}

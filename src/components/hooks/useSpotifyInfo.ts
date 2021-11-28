@@ -27,8 +27,7 @@ export default function useSpotifyInfo() {
     percentage,
     isPlaying: data?.isPlaying || false,
     isPaused: data?.isPlaying && !data?.is_playing,
-    playlist: data?.context.type === 'playlist' ? data?.context.uri : null,
+    playlist: data?.context?.type === 'playlist' ? data?.context?.uri : null,
   }
-  console.info('what', custom.playlist)
   return { data, isLoading, error, custom }
 }
