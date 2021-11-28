@@ -188,11 +188,19 @@ const generatetext: NextApiHandler = async (req, res) => {
   })
 }
 
+const request: NextApiHandler = async (req, res) => {
+  res.json({
+    headers: req.headers,
+    url: req.url,
+  })
+}
+
 const actions = {
   weather,
   steam,
   trains,
   generatetext,
+  request,
 }
 
 const InfoApi: NextApiHandler = async (req, res) => {
