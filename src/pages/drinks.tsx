@@ -21,21 +21,21 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
       <h1 className="mt-5 text-5xl text-center uppercase neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600">
         Drinks
       </h1>
-      <div className="flex flex-col items-center mb-2 mt-2 mx-2">
+      <div className="flex flex-col items-center mx-2 mt-2 mb-2">
         <input
           placeholder={`Search ${numInStock} drink${numInStock === 1 ? '' : 's'}...`}
-          className="w-11/12 mb-2 px-2 py-1 text-white bg-gray-800 border border-gray-900 rounded-md"
+          className="w-11/12 px-2 py-1 mb-2 text-white bg-gray-800 border border-gray-900 rounded-md"
         />
         <div>
           <button
-            className="bg-pink-600 rounded-md text-gray-700 px-2 py-1 mx-1 hover:text-gray-800 hover:bg-pink-700"
+            className="px-2 py-1 mx-1 text-4xl text-gray-700 bg-pink-600 rounded-md hover:text-gray-800 hover:bg-pink-700"
             onClick={() => setSelectedDrink(getRandomFromList(drinks.filter((d) => d.inStock)))}
           >
             <FaRandom />
           </button>
           <button
             className={cls(
-              'bg-pink-600 rounded-md text-gray-700 px-2 py-1 mx-1 hover:text-gray-800 hover:bg-pink-700',
+              'bg-pink-600 rounded-md text-gray-700 px-2 py-1 mx-1 hover:text-gray-800 hover:bg-pink-700 text-4xl',
               { 'animate-pulse': randomState === RandomState.Thinking }
             )}
             disabled={randomState === RandomState.Thinking}
@@ -110,7 +110,7 @@ function DrinkItem({ drink, isOpen: isOpenProp, onClick }: { drink: Drink; isOpe
       onClick={onClick || (() => setIsOpen((o) => !o))}
     >
       <div className="flex flex-row mb-1">
-        <NeonText Element="h3" className="flex-1 text-2xl uppercase">
+        <NeonText Element="h3" className="flex-1 text-4xl uppercase">
           {drink.name}
         </NeonText>
         <Icon className={cls('text-xl -mr-1', { 'opacity-60': !isOpen })} />
