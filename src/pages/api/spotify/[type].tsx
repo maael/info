@@ -1,4 +1,4 @@
-import { NextApiHandler } from 'next'
+import { NextApiHandler, NextApiRequest } from 'next'
 import fetch from 'isomorphic-fetch'
 import Cors from 'cors'
 
@@ -111,11 +111,22 @@ const playing: NextApiHandler = async (req, res) => {
   }
 }
 
-const pause: NextApiHandler = async (req, res) => {
+function isAllowed(req: NextApiRequest) {
   if (!IS_DEV && !ALLOWED_IPS.includes((req.headers['x-real-ip'] || '').toString())) {
-    res.json({ error: 'Not allowed ip', isDev: IS_DEV, ip: req.headers['x-real-ip']?.toString() })
-    return
+    return {
+      ok: false,
+      error: 'Not allowed ip',
+      isDev: IS_DEV,
+      ip: req.headers['x-real-ip']?.toString(),
+      data: null,
+      type: 'error',
+    }
   }
+  return { ok: true }
+}
+
+const pause: NextApiHandler = async (req, res) => {
+  if (!isAllowed(req)) return
   const accessToken = await getRefreshedToken()
   let result
   try {
@@ -143,12 +154,60 @@ const pause: NextApiHandler = async (req, res) => {
   }
 }
 
+async function spotifyApi(
+  access: 'restricted' | 'open',
+  req: NextApiRequest,
+  path: string,
+  method: 'GET' | 'POST' | 'PUT' = 'GET'
+) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let allowedStatus: any = { ok: true }
+  if (access === 'restricted') {
+    allowedStatus = isAllowed(req)
+    if (!allowedStatus.ok) return allowedStatus
+  }
+  const accessToken = await getRefreshedToken()
+  const result = await fetch(`https://api.spotify.com/v1${path}`, {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+    method,
+  })
+  let data = await result.text()
+  let type = 'text'
+  if (data) {
+    data = JSON.parse(data)
+    type = 'json'
+  }
+  return { data, type, ok: true }
+}
+
+const next: NextApiHandler = async (req, res) => {
+  const { data, ok } = await spotifyApi('restricted', req, '/me/player/next', 'POST')
+  if (ok) {
+    res.json({ ...data, ok: 1 })
+  } else {
+    res.status(500).json({ ...data, ok: 0 })
+  }
+}
+
+const previous: NextApiHandler = async (req, res) => {
+  const { data, ok } = await spotifyApi('restricted', req, '/me/player/previous', 'POST')
+  if (ok) {
+    res.json({ ...data, ok: 1 })
+  } else {
+    res.status(500).json({ ...data, ok: 0 })
+  }
+}
+
 const actions = {
   login,
   info,
   token,
   playing,
   pause,
+  next,
+  previous,
 }
 
 const SpotifyApi: NextApiHandler = async (req, res) => {

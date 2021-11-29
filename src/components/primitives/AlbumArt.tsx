@@ -6,6 +6,8 @@ import { FaPauseCircle as PausedIco } from 'react-icons/fa'
 import { useSwipeable } from 'react-swipeable'
 import PlaylistQR from '~/components/primitives/PlaylistQR'
 
+const wait = async (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
 export default function AlbumArt({
   art,
   percentage,
@@ -56,6 +58,14 @@ export default function AlbumArt({
     onSwipedDown: () => {
       setShowQR(false)
     },
+    onSwipedRight: () => {
+      void fetch('/api/spotify/previous')
+      void wait(1000).then(() => refetch())
+    },
+    onSwipedLeft: () => {
+      void fetch('/api/spotify/next')
+      void wait(1000).then(() => refetch())
+    },
     preventDefaultTouchmoveEvent: true,
     trackTouch: true,
     trackMouse: true,
@@ -63,11 +73,11 @@ export default function AlbumArt({
   return (
     <div className="flex items-center justify-center flex-1 mb-3" ref={albumArtDivRef}>
       <div
-        className="relative inline-block h-full mx-auto my-2 overflow-hidden bg-gray-900 shadow-2xl rounded-2xl cursor-pointer"
+        className="relative inline-block h-full mx-auto my-2 overflow-hidden bg-gray-900 shadow-2xl cursor-pointer rounded-2xl"
         style={{ width: size, height: size }}
         onClick={async () => {
           await fetch('/api/spotify/pause')
-          refetch()
+          void wait(1000).then(() => refetch())
         }}
         {...swipeHandlers}
       >
@@ -88,7 +98,7 @@ export default function AlbumArt({
           style={{ width: `${localPercentage}%` }}
         />
         {showQR ? (
-          <div className="absolute inset-20">
+          <div className="absolute inset-10">
             <PlaylistQR playlist={playlist} />
           </div>
         ) : null}
