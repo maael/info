@@ -7,7 +7,7 @@ A refreshing sweet, bright green, melon flavoured drink.
 - Midori, 2 shots
 - Coconut Rum, 1 shot
 - Lemonade
-- Sour Mix, 4 shots
+- Sweet and sour mix, 4 shots
 
 ---
 
@@ -67,15 +67,15 @@ And let me guide you to the purple rain
 - Vodka, 1/2 oz
 - Rum, 1/2 oz
 - Tequila, 1/2 oz
-- Gin, 1/2 oz
-- Blue Curacao liqueur, 1/2 oz
+- Dry Gin, 1/2 oz
+- Blue Curacao, 1/2 oz
 - Sweet and sour mix, 2 oz
-- 7-Up soda, 2 oz
+- Sprite, 2 oz
 
 ## Steps
 
-- Pour all ingredients except the 7-Up into a chilled glass filled with ice cubes
-- Top with 7-Up and stir gently.
+- Pour all ingredients except the Sprite into a chilled glass filled with ice cubes
+- Top with Sprite and stir gently.
 
 ---
 
@@ -83,13 +83,13 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Gin, 1 oz
+- Dry Gin, 1 oz
 - Light rum, 1 oz
 - Tequila, 4/5 oz
 - Vodka, 1 oz
-- Blue Curacao liqueur, 1 1/2 oz
+- Blue Curacao, 1 1/2 oz
 - Sweet and sour mix, 2 oz
-- Sprite soda, 1 oz
+- Sprite, 1 oz
 
 ## Steps
 
@@ -102,7 +102,7 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Amaretto almond liqueur, 1 part
+- Amaretto, 1 part
 - Sweet and sour mix, 1 part
 - Orange juice, 1 part
 
@@ -118,11 +118,11 @@ And let me guide you to the purple rain
 
 - Vodka, 1 shot
 - Light rum, 1 shot
-- Gin, 1 shot
+- Dry Gin, 1 shot
 - Triple sec, 1 shot
-- Southern Comfort peach liqueur, 1 shot
-- Amaretto almond liqueur, 1 shot
-- Grenadine syrup, 1 shot
+- Southern Comfort, 1 shot
+- Amaretto, 1 shot
+- Grenadine, 1 shot
 - Sweet and sour mix, 1 dash
 - Beer, 1 splash
 
@@ -138,9 +138,9 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Light rum, 1 oz
-- 1 cherry
+- 1 cherry, optional
 - Pineapple juice, 2 oz
-- Blue Curacao liqueur, 1 oz
+- Blue Curacao, 1 oz
 - Cream of coconut, 1 oz
 - 1 slice pineapple
 
@@ -157,9 +157,9 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Vodka, 1 oz
-- Blue Curacao liqueur, 1 oz
+- Blue Curacao, 1 oz
 - Lemonade
-- 1 cherry
+- 1 cherry, optional
 
 ## Steps
 
@@ -172,8 +172,9 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Absolut Citron vodka, 3 oz
-- Blue Curacao liqueur, 3 oz
+- Vodka, 3 oz
+- Lemon juice, 1tbsp
+- Blue Curacao, 3 oz
 - Sweet and sour mix, 3 oz
 
 ## Steps
@@ -201,11 +202,11 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Captain Morgan Original spiced rum, 1 1/2 oz
-- Coca-Cola, 4 1/2 oz
+- Pepsi, 4 1/2 oz
 
 ## Steps
 
-- Pour Captain Morgan's Original Spiced Rum and Coca-Cola into a highball glass on the rocks
+- Pour Captain Morgan's Original Spiced Rum and Pepsi into a highball glass on the rocks
 - Mix until the coke fizzes at the top, and serve.
 
 ---
@@ -215,7 +216,7 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - 151 proof rum, 1 1/2 parts
-- Malibu coconut rum, 1 part
+- Malibu, 1 part
 - Pineapple juice, 5 parts
 
 ## Steps
@@ -228,12 +229,12 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Southern Comfort peach liqueur, 1/2 oz
+- Southern Comfort, 1/2 oz
 - Light rum, 1 1/2 oz
-- Amaretto almond liqueur, 1 oz
+- Amaretto, 1 oz
 - Sweet and sour mix, 1 oz
 - Orange juice, 2 oz
-- Grenadine syrup, 1 splash
+- Grenadine, 1 splash
 
 ## Steps
 
@@ -262,10 +263,10 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Blue Curacao liqueur, 30 ml
+- Blue Curacao, 30 ml
 - Vodka, 30 ml
 - Lemonade
-- Raspberry cordial, 1 dash
+- Raspberry liqueur, 1 dash
 - 3 - 4 ice cubes
 
 ## Steps
@@ -283,8 +284,8 @@ And let me guide you to the purple rain
 - Tequila, 1 part
 - Vodka, 1 part
 - Light rum, 1 part
-- Gin, 1 part
-- Chambord raspberry liqueur, 1 part
+- Dry Gin, 1 part
+- Chambord, 1 part
 
 ## Steps
 
@@ -297,11 +298,11 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Vodka, 1 oz
-- Grenadine syrup, 1/4 oz
-- Gin, 1 oz
+- Grenadine, 1/4 oz
+- Dry Gin, 1 oz
 - Light rum, 1 oz
-- Bacardi 151 rum, 1/2 oz
-- Amaretto almond liqueur, 1 oz
+- Bacardi, 1/2 oz
+- Amaretto, 1 oz
 - Triple sec, 1 oz
 - Grapefruit juice
 - Pineapple juice
@@ -320,7 +321,7 @@ And let me guide you to the purple rain
 - Jack Daniel's Tennessee whiskey, 1 part
 - Sweet and sour mix, 1 part
 - Triple sec, 1 part
-- Sprite soda, 4 parts
+- Sprite, 4 parts
 
 ## Steps
 
@@ -352,10 +353,10 @@ And let me guide you to the purple rain
 - Vodka, 1 part
 - Tequila, 1 part
 - Rum, 1 part
-- Gin, 1 part
+- Dry Gin, 1 part
 - Triple sec, 1 part
 - Sweet and sour mix, 1 1/2 parts
-- Coca-Cola, 1 splash
+- Pepsi, 1 splash
 
 ## Steps
 
@@ -371,8 +372,8 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Melon liqueur, 1 oz
-- Whisky sour mix, 1 oz
-- Sprite soda, 2 oz
+- Sweet and sour mix, 1 oz
+- Sprite, 2 oz
 
 ## Steps
 
@@ -386,10 +387,10 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Captain Morgan Original spiced rum, 1.25 oz
-- 12 mint leaves
-- 1 tbsp sugar
+- Mint, 12 leaves
+- Sugar, 1tbsp
 - Lime juice, 0.5 oz
-- Soda, 2 oz
+- Soda water, 2 oz
 
 ## Steps
 
@@ -404,17 +405,17 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - White tequila, 1 1/2 oz
-- Creme de cassis, 1/2 oz
-- 2 lime
-- 12 fresh mint
-- 7-Up soda, 3 - 6 oz
-- 1 tbsp brown sugar
+- Blackcurrent Liqueur, 1/2 oz
+- Lime, 2
+- Mint, 12 leaves
+- Sprite, 3 - 6 oz
+- Sugar, 1tbsp
 
 ## Steps
 
 - Muddle sugar, mint and squeezed lime wedges in mixing tin until mixture smells like spearmint gum
 - Fill with ice, add tequila and cassis, shake until the tin is icey to the touch
-- Pour into a collins glass, top with 7-up and garnish with a sugarcane stick and fresh mint.
+- Pour into a collins glass, top with Sprite and garnish with a sugarcane stick and fresh mint.
 
 ---
 
@@ -423,7 +424,7 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Vodka, 1/2 oz
-- Gin, 1/2 oz
+- Dry Gin, 1/2 oz
 - Triple sec, 1/2 oz
 - Cranberry juice, 1 oz
 - Rum, 1/2 oz
@@ -442,8 +443,8 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Vodka, 1/2 oz
-- Southern Comfort peach liqueur, 1/2 oz
-- Amaretto almond liqueur, 1/2 oz
+- Southern Comfort, 1/2 oz
+- Amaretto, 1/2 oz
 - Triple sec, 1/2 oz
 - Sloe gin, 1/2 oz
 - Lime juice, 1/2 oz
@@ -496,7 +497,7 @@ And let me guide you to the purple rain
 
 - Vodka, 1/2 oz
 - Rum, 1/2 oz
-- Gin, 1/2 oz
+- Dry Gin, 1/2 oz
 - Tequila, 1/2 oz
 - Triple sec, 1/2 oz
 - Melon liqueur, 1 oz
@@ -512,10 +513,10 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Gin, 2 oz
+- Dry Gin, 2 oz
 - Lemon juice, 1 oz
 - Sugar, 1 tsp
-- Club soda, 3 oz
+- Soda water, 3 oz
 - 1 slice orange
 
 ## Steps
@@ -523,7 +524,7 @@ And let me guide you to the purple rain
 - In a shaker half-filled with ice cubes, combine the gin, lemon juice, and sugar
 - Shake well
 - Strain into a collins glass almost filled with ice cubes
-- Add the club soda
+- Add the Soda water
 - Stir and garnish with the cherry and the orange slice.
 
 ---
@@ -535,11 +536,11 @@ And let me guide you to the purple rain
 - Vodka, 1/2 oz
 - Triple sec, 1/2 oz
 - Rum, 1/2 oz
-- Gin, 1/2 oz
+- Dry Gin, 1/2 oz
 - Tequila, 1/2 oz
 - Sweet and sour mix, 1 oz
-- Blue Curacao liqueur, 1/2 oz
-- Sprite soda, 4 - 6 oz
+- Blue Curacao, 1/2 oz
+- Sprite, 4 - 6 oz
 
 ## Steps
 
@@ -589,7 +590,7 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- S Vodka, 3 part
+- Vodka, 3 parts
 - Cranberry juice, 1 part
 - Pineapple juice, 1 part
 
@@ -604,12 +605,12 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Kraken, 8 oz
-- Angostura bitters, 6 dashes
+- Bitters, 6 dashes
 - Lemon Juice
 - Ice
 - Pineapple juice, 5 oz
 - Orange juice, 5 oz
-- Grenadine syrup, 2 oz
+- Grenadine, 2 oz
 
 ## Steps
 
@@ -624,7 +625,7 @@ And let me guide you to the purple rain
 ## Ingredients
 
 - Bacardi, 1 oz
-- Malibum, 1/2 oz
+- Malibu, 1/2 oz
 - Pineapple juice, fill 1/2
 - Cranberry juice, fill 1/2
 
@@ -642,9 +643,9 @@ And let me guide you to the purple rain
 - Vodka, 1/2 oz
 - Melon liqueur, 1/2 oz
 - Peach schnapps, 1/2 oz
-- Blue Curacao liqueur, 1/2 oz
+- Blue Curacao, 1/2 oz
 - Pineapple juice
-- 7-Up soda, 1 splash
+- Sprite, 1 splash
 
 ## Steps
 
@@ -657,7 +658,7 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Malibu coconut rum, 1 part
+- Malibu, 1 part
 - Pineapple juice, 3 parts
 
 ## Steps
@@ -671,7 +672,7 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Malibu coconut rum, 3/4 oz
+- Malibu, 3/4 oz
 - Melon liqueur, 3/4 oz
 - Cranberry juice, 2 oz
 - Orange juice
@@ -688,8 +689,8 @@ And let me guide you to the purple rain
 
 ## Ingredients
 
-- Barcadi, 1 1/2 part
-- Malibu coconut rum, 1 part
+- Bacardi, 1 1/2 part
+- Malibu, 1 part
 - Pineapple juice, 5 parts
 
 ## Steps
@@ -707,7 +708,7 @@ And let me guide you to the purple rain
 - Triple sec, 1 1/2 oz
 - Orange juice, 1/2 oz
 - Pineapple juice, 1 oz
-- Grenadine syrup, 1/4 oz
+- Grenadine, 1/4 oz
 - Ice cubes
 
 ## Steps
@@ -727,7 +728,7 @@ Pour in a thick tall ribbed glass
 ## Ingredients
 
 - Light rum, 1 1/2 oz
-- Gin, 1/2 oz
+- Dry Gin, 1/2 oz
 - Triple sec, 1/2 oz
 - Grapefruit juice, 2 oz
 - Cherry brandy, 1 tsp
@@ -749,12 +750,12 @@ Pour in a thick tall ribbed glass
 - Peach schnapps, 1 1/2 oz
 - Lime juice, 1 oz
 - Orange juice
-- 7-Up soda
+- Sprite
 
 ## Steps
 
 - Pour vodka, schnapps and lime juice into a glass
-- Add orange juice until the glass is half-filled, and fill completely with 7-up
+- Add orange juice until the glass is half-filled, and fill completely with Sprite
 - Stir well, and serve.
 
 ---
@@ -810,12 +811,12 @@ Pour in a thick tall ribbed glass
 
 - Vodka, 2 shots
 - Sweet and sour mix, 2 shots
-- Sprite soda, 1 dash
+- Sprite, 1 dash
 - Cranberry juice, 1 dash
 
 ## Steps
 
-- Mix vodka and sweet and sour mix proportionally in any size batch, then add sprite or 7-up and cranberry accordingly, a dash each per serving
+- Mix vodka and sweet and sour mix proportionally in any size batch, then add sprite or Sprite and cranberry accordingly, a dash each per serving
 - Directions are for single, regular bar size servings.
 
 ---
@@ -828,7 +829,7 @@ Pour in a thick tall ribbed glass
 - Triple sec, 1 3/4 oz
 - Rum, 1 3/4 oz
 - Vodka, 1 3/4 oz
-- Gin, 1 3/4 oz
+- Dry Gin, 1 3/4 oz
 - Sweet and sour mix, fill
 - Cranberry juice, 1 splash
 
@@ -843,12 +844,12 @@ Pour in a thick tall ribbed glass
 ## Ingredients
 
 - Tequila, 1 part
-- Gin, 1 part
+- Dry Gin, 1 part
 - Whiskey, 1 part
 - White rum, 1 part
 - Vodka, 1 part
 - Sugar syrup, 1 oz
-- Coca-Cola
+- Pepsi
 - Orange juice
 
 ## Steps
@@ -865,7 +866,7 @@ Pour in a thick tall ribbed glass
 - Cranberry juice
 - Orange juice
 - Pineapple juice
-- Bacardi 151 rum, 1/2 oz
+- Bacardi, 1/2 oz
 
 ## Steps
 
@@ -881,12 +882,12 @@ Pour in a thick tall ribbed glass
 
 - Vodka, 1 shot
 - Pineapple juice, 4 oz
-- 7-Up soda, 1 oz
+- Sprite, 1 oz
 
 ## Steps
 
 - Pour vodka and pineapple juice into an ice-filled old-fashioned glass
-- Add 7-up, stir, and serve.
+- Add Sprite, stir, and serve.
 
 ---
 
@@ -895,8 +896,8 @@ Pour in a thick tall ribbed glass
 ## Ingredients
 
 - Tequila, 1 1/2 oz
-- Blue Curacao liqueur, 1/2 oz
-- Curacao orange liqueur, 1/2 oz
+- Blue Curacao, 1/2 oz
+- Curacao, 1/2 oz
 - Cranberry juice, 1 oz
 - Sweet and sour mix, 1 oz
 - Lime juice, 1/2 oz
@@ -914,7 +915,7 @@ Pour in a thick tall ribbed glass
 
 - Peach schnapps, 1 shot
 - Vodka, 1 shot
-- Malibu coconut rum, 1 shot
+- Malibu, 1 shot
 - Pineapple juice
 - Cranberry juice
 
@@ -959,7 +960,7 @@ Pour in a thick tall ribbed glass
 
 ## Ingredients
 
-- Malibu coconut rum, 1/2 oz
+- Malibu, 1/2 oz
 - Melon liqueur, 1/2 oz
 - Sweet and sour mix, 1/2 oz
 - Lemon Juice, 1/2 oz

@@ -71,11 +71,31 @@ export async function getDrinks(stock: Stock[]) {
       const amount = parts[1] || ''
       return { name, type: 'Unknown', amount }
     })
-    const inStock = ingredients.every((i) =>
-      stock.some(
-        (s) => s.name.toLowerCase() === i.name.toLowerCase() || s.alcoholType?.toLowerCase() === i.name.toLowerCase()
-      )
+    const inStock = ingredients.every(
+      (i) =>
+        i.amount.toLowerCase() === 'optional' ||
+        i.name.toLowerCase() === 'beer' ||
+        i.name.toLowerCase() === 'rum' ||
+        i.name.toLowerCase() === 'light rum' ||
+        i.name.toLowerCase().includes('ice') ||
+        stock.some(
+          (s) => s.name.toLowerCase() === i.name.toLowerCase() || s.alcoholType?.toLowerCase() === i.name.toLowerCase()
+        )
     )
+    if (!inStock) {
+      console.warn(
+        name,
+        'not in stock, missing:',
+        ingredients.filter(
+          (i) =>
+            !i.name.toLowerCase().includes('ice') &&
+            !stock.some(
+              (s) =>
+                s.name.toLowerCase() === i.name.toLowerCase() || s.alcoholType?.toLowerCase() === i.name.toLowerCase()
+            )
+        )
+      )
+    }
     const drink: Drink = {
       id: uuid(),
       name: name || '???',
@@ -120,7 +140,6 @@ export async function getStock() {
 export async function getGameInfo() {
   const lines = await readDataLines('games.md')
   const sections = getNamedSections('#', lines)
-  console.info({ sections })
   return Object.entries(sections).reduce(
     (acc, [k, v]) => ({ ...acc, [k]: v.map((l) => l.replace(/^-/, '').trim()).filter(Boolean) }),
     {}

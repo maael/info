@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FaCocktail, FaDice, FaInfoCircle, FaRandom, FaTimesCircle, FaUser } from 'react-icons/fa'
+import { FaCocktail, FaDice, FaInfoCircle, FaRandom, FaTimesCircle, FaUser, FaGlassWhiskey } from 'react-icons/fa'
 import cls from 'classnames'
 import { v4 as uuid } from 'uuid'
 import NeonText from '~/components/primitives/NeonText'
@@ -16,6 +16,7 @@ enum RandomState {
 export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: Stock[] }) {
   const numInStock = drinks.filter((d) => d.inStock).length
   const [selectedDrink, setSelectedDrink] = React.useState<Drink | null>(null)
+  const [selectedShot, setSelectedShot] = React.useState<string | null>(null)
   const [randomState, setRandomState] = React.useState(RandomState.Idle)
   return (
     <Overlay>
@@ -89,9 +90,23 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
           >
             <FaDice />
           </button>
+          <button
+            className="px-2 py-1 mx-1 text-4xl text-gray-700 bg-pink-600 rounded-md hover:text-gray-800 hover:bg-pink-700"
+            onClick={() => setSelectedShot(getRandomFromList(stock.filter((s) => s.type === 'alcohol')).name)}
+          >
+            <FaGlassWhiskey />
+          </button>
         </div>
       </div>
       {randomState === RandomState.Thinking ? <div className="mb-2 text-center animate-pulse">Thinking...</div> : null}
+      {selectedShot ? (
+        <div
+          onClick={() => setSelectedShot(null)}
+          className="mb-4 cursor-pointer text-center relative animate-pulse font-bold py-4 text-gray-700 bg-pink-600 text-5xl"
+        >
+          {selectedShot} <FaTimesCircle className="text-2xl absolute right-4 top-7" />
+        </div>
+      ) : null}
       {selectedDrink ? (
         <div className="mb-10">
           <DrinkItem drink={selectedDrink} isOpen={true} onClick={() => setSelectedDrink(null)} />

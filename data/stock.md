@@ -12,6 +12,7 @@
 | Honey Liqueur                   | Honey Liqueur        | ✅       |
 | Midori                          | Melon Liqueur        | ✅       |
 | Blue Curacao                    | Blue Curacao         | ✅       |
+| Curacao                         | Curacao              | ✅       |
 | Triple Sec                      | Triple Sec           | ✅       |
 | Orange Gin                      | Orange Gin           | ✅       |
 | Bombay Sapphire Gin             | Dry Gin              | ✅       |
@@ -54,20 +55,23 @@
 
 # Mixers
 
-| Name             | In Stock |
-| ---------------- | -------- |
-| Lemonade         | ✅       |
-| Pepsi            | ✅       |
-| Orange Juice     | ✅       |
-| Apple Juice      | ✅       |
-| Pineapple Juice  | ✅       |
-| Grapefruit Juice | ✅       |
-| Cranberry Juice  | ✅       |
-| Ginger Beer      | ✅       |
-| Milk             | ✅       |
-| Soda Water       | ✅       |
-| Tonic Water      | ✅       |
-| Energy Drink     | ✅       |
+| Name               | In Stock |
+| ------------------ | -------- |
+| Lemonade           | ✅       |
+| Pepsi              | ✅       |
+| Orange Juice       | ✅       |
+| Apple Juice        | ✅       |
+| Pineapple Juice    | ✅       |
+| Grapefruit Juice   | ✅       |
+| Cranberry Juice    | ✅       |
+| Ginger Beer        | ✅       |
+| Milk               | ✅       |
+| Soda Water         | ✅       |
+| Tonic Water        | ✅       |
+| Energy Drink       | ✅       |
+| Sweet and Sour Mix | ✅       |
+| Sprite             | ✅       |
+| Fanta              | ✅       |
 
 ---
 
