@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { FaCocktail, FaDice, FaInfoCircle, FaRandom, FaTimesCircle, FaUser } from 'react-icons/fa'
 import cls from 'classnames'
+import { v4 as uuid } from 'uuid'
 import NeonText from '~/components/primitives/NeonText'
 import Overlay from '~/components/primitives/Overlay'
 import { getDrinks, getStock } from '~/utils/data'
@@ -60,6 +61,17 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
                 )
                 const name = getDrinkName()
                 let description = ''
+                const id = `generated-${uuid()}`
+                const rndDrink: Drink = {
+                  name,
+                  description,
+                  steps: DEFAULT_STEPS,
+                  ingredients: [...new Set([alcohol as any, mixer as any, misc as any].flat())],
+                  addedBy: 'RNGesus',
+                  id,
+                  inStock: true,
+                }
+                setSelectedDrink(rndDrink)
                 try {
                   const { output } = await fetch(
                     `/api/info/generatetext?input=A drink called ${name} tastes like`
@@ -69,16 +81,7 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
                 } catch (e) {
                   console.warn(e)
                 }
-                const rndDrink: Drink = {
-                  name,
-                  description,
-                  steps: DEFAULT_STEPS,
-                  ingredients: [...new Set([alcohol as any, mixer as any, misc as any].flat())],
-                  addedBy: 'RNGesus',
-                  id: '',
-                  inStock: true,
-                }
-                setSelectedDrink(rndDrink)
+                setSelectedDrink((d) => (d?.id === id ? { ...d, description } : d))
               } finally {
                 setRandomState(RandomState.Idle)
               }
