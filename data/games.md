@@ -1,96 +1,244 @@
 # Never Have I Ever
 
-- Never have I ever played hooky from school or work
-- Never have I ever rode a motorcycle
-- Never have I ever lost a bet
-- Never have I ever gone skinny-dipping
-- Never have I ever cheated on someone
-- Never have I ever sang karaoke
-- Never have I ever broken a bone
-- Never have I ever lived alone
-- Never have I ever been on a boat
-- Never have I ever drove a stick shift\n
-- Never have I ever used a fake ID
-- Never have I ever broken up with someone
-- Never have I ever got seriously hungover
-- Never have I ever kissed someone in public
-- Never have I ever fought in public
-- Never have I ever skipped out on a bill
-- Never have I ever won the lottery
-- Never have I ever had to go to court
-- Never have I ever been to a destination wedding
-- Never have I ever lied to a boss
-- Never have I ever crashed a wedding
-- Never have I ever kissed more than one person in 24 hours
-- Never have I ever pranked someone
-- Never have I ever had a one-night stand
-- Never have I ever regifted a gift
-- Never have I ever trolled someone on social media
-- Never have I ever climbed out of a window
-- Never have I ever drove over a curb
-- Never have I ever laughed so hard I, um, peed my pants as an adult
-- Never have I ever got on the wrong train or bus
-- Never have I ever sent a sext
-- Never have I ever cursed in a place of worship
-- Never have I ever snooped through someone’s stuff
-- Never have I ever tried marijuana
-- Never have I ever went 24 hours without showering
-- Never have I ever had to take a walk of shame
-- Never have I ever went on a solo vacation
-- Never have I ever went on a road trip
-- Never have I ever ate an entire pizza by myself
-- Never have I ever saved a life
-- Never have I ever got a tattoo
-- Never have I ever wanted to be on a reality TV show
-- Never have I ever started a fire
-- Never have I ever got stopped by airport security
-- Never have I ever went viral online
-- Never have I ever left gum in a public space
-- Never have I ever slept outdoors for an entire night
-- Never have I ever ran a marathon
-- Never have I ever given/received a lap dance
-- Never have I ever made a speech in front of 100 people or more
-- Never have I ever "relieved myself" in a public pool
-- Never have I ever lied to my best friend about who I was with
-- Never have I ever been to a Disney park
-- Never have I ever had a threesome
-- Never have I ever left someone on read
-- Never have I ever fallen asleep during sex
-- Never have I ever lied about my age
-- Never have I ever made up a story about someone who wasn’t real
-- Never have I ever believed something was haunted
-- Never have I ever participated in a protest
-- Never have I ever had sleep paralysis
-- Never have I ever been the alibi for a lying friend
-- Never have I ever pulled an all-nighter
-- Never have I ever role-played
-- Never have I ever regretted an apology
-- Never have I ever pretended I was sick for attention
-- Never have I ever disliked something that I cooked
-- Never have I ever deleted a post on social media because it didn’t get enough likes
-- Never have I ever spent more than $100 on a top
-- Never have I ever thrown a drink at someone
-- Never have I ever worn someone else’s underwear
-- Never have I ever traveled to Europe
-- Never have I ever attempted a trendy diet
-- Never have I ever gone to a strip club
-- Never have I ever binged an entire series in one day
-- Never have I ever tried psychedelics
-- Never have I ever met someone famous
-- Never have I ever gone streaking
-- Never have I ever been on a sports team
-- Never have I ever maxed out a credit card
-- Never have I ever been blackout drunk
-- Never have I ever been engaged
-- Never have I ever gotten married
-- Never have I ever donated to a charity
-- Never have I ever pretended to be sick to get out of something
-- Never have I ever stood up a date
-- Never have I ever ghosted someone
-- Never have I ever had sex on a beach
-- Never have I ever fallen in love
+- Never have I ever played hooky from school or work?
+- Never have I ever rode a motorcycle?
+- Never have I ever lost a bet?
+- Never have I ever gone skinny-dipping?
+- Never have I ever cheated on someone?
+- Never have I ever sang karaoke?
+- Never have I ever broken a bone?
+- Never have I ever lived alone?
+- Never have I ever been on a boat?
+- Never have I ever drove a stick shift\n?
+- Never have I ever used a fake ID?
+- Never have I ever broken up with someone?
+- Never have I ever got seriously hungover?
+- Never have I ever kissed someone in public?
+- Never have I ever fought in public?
+- Never have I ever skipped out on a bill?
+- Never have I ever won the lottery?
+- Never have I ever had to go to court?
+- Never have I ever been to a destination wedding?
+- Never have I ever lied to a boss?
+- Never have I ever crashed a wedding?
+- Never have I ever kissed more than one person in 24 hours?
+- Never have I ever pranked someone?
+- Never have I ever had a one-night stand?
+- Never have I ever regifted a gift?
+- Never have I ever trolled someone on social media?
+- Never have I ever climbed out of a window?
+- Never have I ever drove over a curb?
+- Never have I ever laughed so hard I peed my pants as an adult?
+- Never have I ever got on the wrong train or bus?
+- Never have I ever sent a sext?
+- Never have I ever cursed in a place of worship?
+- Never have I ever snooped through someone’s stuff?
+- Never have I ever tried marijuana?
+- Never have I ever went 24 hours without showering?
+- Never have I ever had to take a walk of shame?
+- Never have I ever went on a solo vacation?
+- Never have I ever went on a road trip?
+- Never have I ever ate an entire pizza by myself?
+- Never have I ever saved a life?
+- Never have I ever got a tattoo?
+- Never have I ever wanted to be on a reality TV show?
+- Never have I ever started a fire?
+- Never have I ever got stopped by airport security?
+- Never have I ever went viral online?
+- Never have I ever left gum in a public space?
+- Never have I ever slept outdoors for an entire night?
+- Never have I ever ran a marathon?
+- Never have I ever given/received a lap dance?
+- Never have I ever made a speech in front of 100 people or more?
+- Never have I ever "relieved myself" in a public pool?
+- Never have I ever lied to my best friend about who I was with?
+- Never have I ever been to a Disney park?
+- Never have I ever had a threesome?
+- Never have I ever left someone on read?
+- Never have I ever fallen asleep during sex?
+- Never have I ever lied about my age?
+- Never have I ever made up a story about someone who wasn’t real?
+- Never have I ever believed something was haunted?
+- Never have I ever participated in a protest?
+- Never have I ever had sleep paralysis?
+- Never have I ever been the alibi for a lying friend?
+- Never have I ever pulled an all-nighter?
+- Never have I ever role-played?
+- Never have I ever regretted an apology?
+- Never have I ever pretended I was sick for attention?
+- Never have I ever disliked something that I cooked?
+- Never have I ever deleted a post on social media because it didn’t get enough likes?
+- Never have I ever spent more than $100 on a top?
+- Never have I ever thrown a drink at someone?
+- Never have I ever worn someone else’s underwear?
+- Never have I ever traveled to Europe?
+- Never have I ever attempted a trendy diet?
+- Never have I ever gone to a strip club?
+- Never have I ever binged an entire series in one day?
+- Never have I ever tried psychedelics?
+- Never have I ever met someone famous?
+- Never have I ever gone streaking?
+- Never have I ever been on a sports team?
+- Never have I ever maxed out a credit card?
+- Never have I ever been blackout drunk?
+- Never have I ever been engaged?
+- Never have I ever gotten married?
+- Never have I ever donated to a charity?
+- Never have I ever pretended to be sick to get out of something?
+- Never have I ever stood up a date?
+- Never have I ever ghosted someone?
+- Never have I ever had sex on a beach?
+- Never have I ever fallen in love?
+- Never have I ever got in a fight?
+- Never have I ever given a blowjob?
+- Never have I ever made out with the same sex (not for a game)?
+- Never have I ever killed an animal (larger than insects)?
+- Never have I ever gone fishing?
+- Never have I ever been in hospital overnight?
+- Never have I ever broken a bone?
+- Never have I ever caught my parents having sex?
+- Never have I ever caught someone else jerking it?
+- Never have I ever put a foreign object in my ass?
+- Never have I ever broken up with somebody?
+- Never have I ever flirted with a teacher?
+- Never have I ever blacked out from drinking?
+- Never have I ever got with somebody in a club?
+- Never have I ever had a one night stand?
+- Never have I ever built ikea furniture?
+- Never have I ever watched someone die (IRL)?
+- Never have I ever been fired?
+- Never have I ever got food poisoning?
+- Never have I ever saved someones life?
+- Never have I ever failed a class?
+- Never have I ever had a proper electric shock?
+- Never have I ever put someone else in the hospital?
+- Never have I ever built a campfire?
+- Never have I ever broken a phone?
+- Never have I ever lost my wallet/purse?
+- Never have I ever spent more than £80 on a pair of shoes?
+- Never have I ever driven faster than 100mph?
+- Never have I ever crashed a party?
+- Never have I ever been to America?
+- Never have I ever got a degree?
+- Never have I ever spent more than 14 hours in one day playing videos games?
+- Never have I ever slept for more than 12 hours (not as a child)?
+- Never have I ever cheated on a partner?
+- Never have I ever run with scissors?
+- Never have I ever watched porn for over an hour?
+- Never have I thrown up on someone else?
+- Never have I had someone else inside my butt?
+- Never have I been caught masturbating?
+- Never have I been in a car crash?
+- Never have I woken up in an unexpected place?
+- Never have I fucked a kebab?
+- Never have I owned a pair of vans?
+- Never have I flexed?
 
 # Outrage
 
-- Who is most likely to X?
-- Who is most likely to Y?
+- Who is least likely to get punched
+- Who has the worst taste in food
+- Who can least take a joke
+- Who is least likely to spend money
+- Who is the least attractive
+- Who is least likely to do exercise today
+- Who is most likely to get food poisoning
+- Who will move out of their parents home last
+- Who is most likely to die on the toilet
+- Who is most likely to be into beastiality
+- Who has the least money
+- Who is most likely to have a heart attack
+- Who is most likely to receive a rimjob
+- Who is most likely to get banned on Twitch
+- Who is most likely to travel to Africa
+- Who is least likely to get fired
+- Who is least likely to pick themselves in the next question
+- Who is most likely to make a living on Twitch
+- Who is most likely to find a penny
+- Who is least likely to be on TV
+- Who is the worst at video games
+- Who is least likely to break their phone
+- Who is least likely to get surgery
+- Who is most likely to die before 30
+- Who is most likely to become prime minister
+- Who is most likely to blackout from drinking
+- Who is most likely to get kicked out of their house
+- Who is most likely to bleach their asshole
+- Who is most likely to become a cannibal
+- Who is most likely to punch a toddler
+- Who has the worst genitals
+- Who is least likely to make it to 40
+- Who is the most likely to get stabbed
+- Who is most likely to have a foot fetish
+- Who loves their parents the most
+- Who is most likely to get lost
+- Who is most likely to earn 100k a year
+- Who is most likely to win at beer pong
+- Who is most likely to live abroad
+- Who is least likely to crash a car
+- Who is most likely to win in a group wrestling match
+- Who is least likely to have a kid
+- Who is most likely to die alone
+- Who is least likely to have sex tonight
+- Who is most likely to become homeless
+- Who is most likely to get an abortion (or their partner)
+- Who is most likely to get alcohol poisoning
+- Who is most likely to get married first
+- Who is least likely to win a game of league
+- Who has the worst taste in films
+- Who can fit the largest object inside them
+- Who is least likely to get offended tonight
+- Who is most likely to get into a gay relationship
+- Who is the gayest
+- Who has the worst social skills
+- Who is most likely to piss themselves
+- Who is most likely to drown
+- Who can down a drink fastest
+- Who is most likely to forget their partners birthday
+- Who is most likely to defect to North Korea
+- Who is least likely to get a job
+- Who is most likely to go to A and E
+- Who is least likely to win at Risk
+- Who is most likely to have cosmetic surgery
+- Who is most likely to get arrested
+- Who is the biggest hypocrite
+- Who has the weirdest kink
+- Who is most likely to go parachuting
+- Who is the funniest
+- Who is least likely to succeed a backflip
+- Who is most likely to get assassinated
+- Who is most likely to have sex with their Mum
+- Who is most likely to marry for money
+- Who is most likely to have a threesome
+- Who is least likely to cook a proper meal
+- Who is the most arrogant
+- Who has the worst dress sense
+- Who is the biggest liar
+- Who is most likely to survive in the hunger games
+- Who was the worst child
+- Who can eat the most
+- Who is most likely to get a dildo stuck in them
+- Who is the most likely to join ISIS
+- Who is least likely to use a buttplug
+- Who has the hottest sibling
+- Who is most likely to fall off a cliff
+- Who was the largest baby
+- Who could fit the most peas in their nose
+- Who would be the worst at sex
+- Who is the most fit
+- Who knows the most about ears
+- Who would be the worst partner
+- Who has the worst hair
+- Who is most likely to get acid thrown at them
+- Who has the worst taste in music
+- Who is most likely to get a divorce
+- Who is the most oblivious
+- Who is most likely to kill an animal
+- Who is least likely to leave their house
+- Who is the most likely to flex
+- Who is the most likely to fuck a radiator
+- Who is the most likely to listen to classical music
+- Who is the most likely to punch a wall
+- Who is the most likely to dress up in a onesie in public
+- Who is the most likely to streak after a night drinking
+- Who's Mum do you most want to fuck?
