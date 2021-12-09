@@ -7,17 +7,21 @@ import Overlay from '~/components/primitives/Overlay'
 import { getDrinks, getStock } from '~/utils/data'
 import { Drink, Stock } from '~/utils/types'
 import { getRandomFromList, getRandomInt } from '~/utils/rnd'
+import useFilter from '~/components/hooks/useFilter'
 
 enum RandomState {
   Idle,
   Thinking,
 }
 
+type ExtendedStock = Stock & { amount: string }
+
 export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: Stock[] }) {
-  const numInStock = drinks.filter((d) => d.inStock).length
+  const inStockDrinks = drinks.filter((d) => d.inStock)
   const [selectedDrink, setSelectedDrink] = React.useState<Drink | null>(null)
   const [selectedShot, setSelectedShot] = React.useState<string | null>(null)
   const [randomState, setRandomState] = React.useState(RandomState.Idle)
+  const { search, setSearch, filtered } = useFilter(drinks, 'name,description,ingredients.name,ingredients.type')
   return (
     <Overlay>
       <h1 className="mt-5 text-5xl text-center uppercase neon text-gradient bg-gradient-to-br from-pink-600 via-pink-700 to-yellow-600">
@@ -25,8 +29,10 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
       </h1>
       <div className="flex flex-col items-center mx-2 mt-2 mb-2">
         <input
-          placeholder={`Search ${numInStock} drink${numInStock === 1 ? '' : 's'}...`}
+          placeholder={`Search ${inStockDrinks.length} drink${inStockDrinks.length === 1 ? '' : 's'}...`}
           className="w-11/12 px-2 py-1 mb-2 text-white bg-gray-800 border border-gray-900 rounded-md"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
         <div>
           <button
@@ -44,21 +50,21 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
             onClick={async () => {
               setRandomState(RandomState.Thinking)
               try {
-                const alcohol = Array.from({ length: getRandomInt(1, 3) })
+                const alcohol: ExtendedStock[] = Array.from({ length: getRandomInt(1, 3) })
                   .map(() => getRandomFromList(stock.filter((s) => s.type === 'alcohol')))
                   .map((i) => {
                     const amount = getRandomInt(1, 2)
                     return { ...i, amount: `${amount} shot${amount === 1 ? '' : 's'}` }
                   })
-                const mixer = Array.from({ length: getRandomInt(1, 3) })
+                const mixer: ExtendedStock[] = Array.from({ length: getRandomInt(1, 3) })
                   .map(() => getRandomFromList(stock.filter((s) => s.type === 'mixers')))
                   .map((i, idx) => {
                     const shots = getRandomInt(1, 2)
                     const amount = idx === 0 ? 'fill to the top' : `${shots} shot${shots === 1 ? '' : 's'}`
                     return { ...i, amount }
                   })
-                const misc = Array.from({ length: getRandomInt(0, 2) }).map(() =>
-                  getRandomFromList(stock.filter((s) => s.type === 'misc'))
+                const misc: ExtendedStock[] = Array.from({ length: getRandomInt(0, 2) }).map(() =>
+                  getRandomFromList(stock.filter((s) => s.type === 'misc') as ExtendedStock[])
                 )
                 const name = getDrinkName()
                 let description = ''
@@ -67,7 +73,15 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
                   name,
                   description,
                   steps: DEFAULT_STEPS,
-                  ingredients: [...new Set([alcohol as any, mixer as any, misc as any].flat())],
+                  ingredients: [
+                    ...new Set(
+                      [
+                        [...new Map<string, ExtendedStock>(alcohol.map((a) => [a.name, a])).values()],
+                        [...new Map<string, ExtendedStock>(mixer.map((a) => [a.name, a])).values()],
+                        [...new Map<string, ExtendedStock>(misc.map((a) => [a.name, a])).values()],
+                      ].flat()
+                    ),
+                  ],
                   addedBy: 'RNGesus',
                   id,
                   inStock: true,
@@ -113,7 +127,9 @@ export default function DrinksPage({ drinks, stock }: { drinks: Drink[]; stock: 
         </div>
       ) : null}
       <div className="flex flex-col h-full pb-40 overflow-y-auto">
-        {drinks.map((d) => (d.inStock ? <DrinkItem key={d.id} drink={d} /> : null))}
+        {filtered.map((d) => (
+          <DrinkItem key={d.id} drink={d} />
+        ))}
       </div>
     </Overlay>
   )
